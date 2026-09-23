@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <center>
+
+<h2>Counter App</h2>
+
+<p id="count">0</p>
+
+<button onclick="add()">+</button>
+<button onclick="reset()">Reset</button>
+<button onclick="sub()">-</button>
+
+<script>
+let c = 0;
+
+function add() {
+  c++;
+  document.getElementById("count").innerHTML = c;
+}
+
+function sub() {
+  c--;
+  document.getElementById("count").innerHTML = c;
+}
+
+function reset() {
+  c = 0;
+  document.getElementById("count").innerHTML = c;
+}
+</script>
+</center>
+
+</body>
+</html>

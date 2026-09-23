@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Card</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .box{
+            margin-top:20px;
+        }
+
+        input{
+            width:200px;
+            padding:8px;
+            margin:8px;
+        }
+
+        button{
+            padding:10px 20px;
+            background-color:blue;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        .card{
+            width:300px;
+            margin:20px auto;
+            padding:20px;
+            background:white;
+            border:2px solid black;
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student User Profile Card</h2>
+
+<div class="box">
+    <input type="text" id="name" placeholder="Enter Student Name"><br>
+
+    <input type="text" id="roll" placeholder="Enter Roll No"><br>
+
+    <input type="number" id="mark" placeholder="Enter Marks"><br>
+
+    <button onclick="displayProfile()">Display Profile</button>
+</div>
+
+<div class="card" id="card">
+    <h3>Student Profile</h3>
+
+    <p><b>Student Name:</b> <span id="sname"></span></p>
+
+    <p><b>Roll No:</b> <span id="sroll"></span></p>
+
+    <p><b>Marks:</b> <span id="smark"></span></p>
+
+    <p><b>Grade:</b> <span id="sgrade"></span></p>
+</div>
+
+<script>
+
+function displayProfile(){
+
+    let name=document.getElementById("name").value;
+    let roll=document.getElementById("roll").value;
+    let mark=parseInt(document.getElementById("mark").value);
+
+    let grade;
+
+    if(mark>=90){
+        grade="A";
+    }
+    else if(mark>=75){
+        grade="B";
+    }
+    else if(mark>=50){
+        grade="C";
+    }
+    else{
+        grade="Fail";
+    }
+
+    document.getElementById("sname").innerHTML=name;
+    document.getElementById("sroll").innerHTML=roll;
+    document.getElementById("smark").innerHTML=mark;
+    document.getElementById("sgrade").innerHTML=grade;
+
+    document.getElementById("card").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
