@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.form-box {
+  width: 520px;
+  padding: 35px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  color: #4b3f72;
+  font-size: 30px;
+}
+
+h1::after {
+  content: "Create your account";
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  color: #888;
+  margin-top: 6px;
+}
+
+label {
+  display: block;
+  margin-top: 17px;
+  margin-bottom: 7px;
+  color: #4b3f72;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #ddd6f3;
+  border-radius: 10px;
+  background: #faf9ff;
+  color: #333;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7657d9;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(118, 87, 217, 0.12);
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 13px;
+  padding: 10px;
+  border-radius: 9px;
+  background: #f5f2ff;
+}
+
+.checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #7657d9;
+}
+
+.checkbox span {
+  font-size: 13px;
+  color: #555;
+}
+
+.limit {
+  font-size: 12px;
+  color: #999;
+  margin-top: 7px;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #7657d9;
+  font-weight: 600;
+  background: #f4f0ff;
+  padding: 8px 10px;
+  border-radius: 7px;
+}
+
+.success {
+  text-align: center;
+  color: #16834b;
+  background: #e8fff2;
+  padding: 12px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.error {
+  text-align: center;
+  color: #d13c3c;
+  background: #fff0f0;
+  padding: 12px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit {
+  background: linear-gradient(135deg, #7657d9, #5b43b5);
+  color: white;
+  box-shadow: 0 6px 15px rgba(91, 67, 181, 0.3);
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(91, 67, 181, 0.4);
+}
+
+.clear {
+  background: #eeeaf9;
+  color: #5b43b5;
+}
+
+.clear:hover {
+  background: #ddd6f3;
+  transform: translateY(-2px);
+}
+
+input[type="file"] {
+  padding: 10px;
+  background: #faf9ff;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 7px;
+  background: #7657d9;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .form-box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
